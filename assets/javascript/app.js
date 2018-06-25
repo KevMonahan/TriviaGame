@@ -10,7 +10,7 @@ $(document).ready(function () {
         var timeRemaining = 300;
         $("#startButton").css("display", "none");
         $("#submitButton").css("visibility", "visible");
-        var queryURL = "https://opentdb.com/api.php?amount=3&category=15&type=multiple";
+        var queryURL = "https://opentdb.com/api.php?amount=8&category=15&type=multiple";
 
 
         // Incredible array shuffling snippet I found on stack overflow that replaced my previous disaster of a randomizer.
@@ -57,7 +57,7 @@ $(document).ready(function () {
                     currentAnswerArray.push(incorrect);
                 })
                 answerArrays.push(currentAnswerArray);
-                $("#mainContent").append(`<h5 class="questions">${answer.question}</h5>`);
+                $("#mainContent").append(`<h3 class="questions">${answer.question}</h3>`);
                 $("#mainContent").append(`<div class="btn-group" id="${"question-" + j + "-answers"}" data-toggle="buttons"></div>`);
 
 
@@ -89,10 +89,10 @@ $(document).ready(function () {
                         // inputDiv.attr("value", shuffledArray[z]);
 
                         $(`#mainContent #question-${j}-answers`).append(labelDiv);
-                        $(`#mainContent #answer-${z}`).append(inputDiv);
+                        $(`#mainContent #question-${j}-answers #answer-${z}`).append(inputDiv);
 
 
-                        $("#mainContent #answer" + z).attr("value", shuffledArray[z])
+                        $(`#mainContent #question-${j}-answers #answer${z}`).attr("value", shuffledArray[z])
 
                         z++;
 

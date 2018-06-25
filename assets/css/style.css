@@ -1,0 +1,15 @@
+body {
+    background-image: url("../images/backgroundImg.jpg");
+    background-size: 100%;
+    text-align: center;
+}
+
+#submitButton {
+    visibility: hidden;
+    
+}
+.btn-group {
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
